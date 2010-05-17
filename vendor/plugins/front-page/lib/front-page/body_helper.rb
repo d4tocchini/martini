@@ -1,4 +1,4 @@
-module BodyHelper  
+module FrontPage::BodyHelper  
   def body_id(string)
     @body_id = string
   end

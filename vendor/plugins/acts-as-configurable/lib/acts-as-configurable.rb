@@ -1,4 +1,12 @@
 require 'preferences'
+def require_local(path, from = __FILE__)
+  files(path, from) {|file| require file if File.extname(file) == ".rb"}
+end
+
+def files(path, from = __FILE__, &block)
+  Dir.glob(File.expand_path(File.join(File.dirname(from), path))) {|file| yield file}
+end
+
 module ActsAsConfigurable
   class << self
     attr_accessor :configurations
@@ -82,3 +90,5 @@ module ActsAsConfigurable
 end
 
 ActiveRecord::Base.send(:include, ActsAsConfigurable::Aliases)
+
+require_local "acts-as-configurable/*"

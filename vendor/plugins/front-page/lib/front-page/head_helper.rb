@@ -1,4 +1,4 @@
-module HeadHelper
+module FrontPage::HeadHelper
   
   def meta(options = {})
     title(options[:title]) if options.has_key?(:title)
@@ -209,4 +209,3 @@ module HeadHelper
       strip_tags(keywords).mb_chars.downcase
     end
 end
-ActionView::Base.send :include, HeadHelper

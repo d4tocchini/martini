@@ -3,11 +3,11 @@
 <!-- it's basically a sitemap for the sitemap -->
 <root type="array">
 	<!-- overview -->
-	<item title="Home" url="/">
+	<item title="Home" url="/" layout="home">
 	  
 	</item>
 	
-	<item title="Overview" url="/overview" layout="home">
+	<item title="Overview" url="/overview">
 	  
 	</item>
 	

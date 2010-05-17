@@ -23,5 +23,7 @@ end
 
 require_local "front-page/*"
 
-#FrontPage.send(:include, FrontPage::MetaHelper)
+FrontPage.send(:include, FrontPage::HeadHelper)
+FrontPage.send(:include, FrontPage::BodyHelper)
+FrontPage.send(:include, FrontPage::NavigationHelper)
 ActionView::Base.send :include, FrontPage

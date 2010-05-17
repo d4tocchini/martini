@@ -1,4 +1,4 @@
-module NavigationHelper
+module FrontPage::NavigationHelper
   
   def menu_for(item, options = {}, &block)
     if item.is_a?(Page)

@@ -10,7 +10,10 @@ class Asset < ActiveRecord::Base
       :micro => "20x20#"
     },
     :storage => :s3,
-    :s3_credentials => "config/s3.yml",
+    :s3_credentials => {
+      :access_key_id => Credentials.get("s3.key"),
+      :secret_access_key => Credentials.get("s3.secret")
+    },
     :path => ":attachment/:id/:style.:extension",
     :bucket => 'ilove4d-test'
 end

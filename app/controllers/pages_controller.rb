@@ -11,6 +11,10 @@ class PagesController < InheritedResources::Base
   
   protected
     def resource
-      @page ||= Page.find(params[:path].split("/").last)
+      @page ||= Page.find(basename)
+    end
+    
+    def basename
+      params[:path].split("/").last.to_s
     end
 end

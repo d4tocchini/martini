@@ -26,7 +26,7 @@ Martini::Application.routes.draw do |map|
   match 'register' => 'users#create', :as => :register, :via => :post
   match 'connect' => 'users#update', :as => :connect, :via => :put
   
-  root :to => "overview#index"
+  root :to => "pages#show", :path => "overview"
   
   match '*path/page/:page' => "pages#index"
   match '*path' => "pages#show", :as => :page
