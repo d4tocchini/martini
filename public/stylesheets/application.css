@@ -1,0 +1,24 @@
+.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}
+.field label {
+  display:block;
+}
+
+.lance {
+  height: 1.5em;
+  line-height: 1.2em;
+}
+
+tr.even {
+  background-color: #EAEAEA;
+}
+
+pre {
+  background: #ffffff;
+  padding: 10px 10px 10px 10px;
+  margin:10;
+}
+
+textarea.description {
+  width:100%;
+  height:50px;
+}

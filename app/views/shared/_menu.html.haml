@@ -1,0 +1,4 @@
+.menu
+  - menu_for(Page.roots, :menu_attributes => {:class => "sf-menu"}, :li_attributes => {:class => "page_item"}) do |node|
+    %a{:href => page_path(node)}
+      = node.title

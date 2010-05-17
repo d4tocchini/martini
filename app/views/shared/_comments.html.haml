@@ -1,0 +1,7 @@
+.post
+  %h2#comments 2 Responses to "Organizing Armageddon"
+  %ol.commentlist
+    = render :partial => "shared/comment", :collection => @comments
+  .navigation
+    .alignleft
+    .alignright

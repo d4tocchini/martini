@@ -1,0 +1,12 @@
+- form_for(:configuration, :url => admin_configuration_path(@configuration)) do |f|
+  = f.error_messages
+  
+  .field
+    = f.label "Use OpenID"
+    = f.check_box :prefers_use_open_id
+  .field
+    = f.label "Use Oauth"
+    = f.check_box :prefers_use_oauth
+
+  .actions
+    = f.submit

@@ -1,0 +1,5 @@
+.widget.widget_search
+  %form#searchform{:action => "/search", :method => "get", :name => "searchform"}
+    %fieldset
+      %input#s{:name => "s", :type => "text", :value => ""}/
+      %a.fresh_button{:href => "javascript:document.searchform.submit()"} find

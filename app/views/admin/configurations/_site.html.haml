@@ -1,0 +1,15 @@
+- form_for(:configuration, :url => admin_configuration_path(@configuration)) do |f|
+  = f.error_messages
+  
+  .field
+    = f.label :title
+    = f.text_field :preferred_title
+  .field
+    = f.label :tagline
+    = f.text_field :preferred_tagline
+  .field
+    = f.label :email
+    = f.text_field :preferred_email
+
+  .actions
+    = f.submit

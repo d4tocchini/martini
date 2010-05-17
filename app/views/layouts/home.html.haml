@@ -1,0 +1,11 @@
+= render :layout => "layouts/root" do
+  = render :partial => "shared/head"
+  %body.home.blog
+    .wrapper
+      = render :partial => "shared/header"
+      .content
+        = render :partial => "shared/teasers"
+      .frontcontent
+        = render :partial => "shared/quote"
+      = render :partial => "shared/bottom"
+    = render :partial => "shared/footer"

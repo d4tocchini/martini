@@ -1,0 +1,18 @@
+- header "Listing tags"
+
+%table
+  %thead
+    %tr
+      %th Name
+      %th{ :colspan => 3 }
+  
+  %tbody
+    - for tag in @tags
+      %tr{ :class => cycle(:odd, :even) }
+        %td= tag.name
+        %td= link_to 'Show', tag
+        %td= link_to 'Edit', edit_tag_path(tag)
+        %td= link_to 'Destroy', tag, :confirm => 'Are you sure?', :method => :delete
+
+%br
+= link_to 'New tag', new_tag_path

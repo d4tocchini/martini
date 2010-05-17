@@ -1,0 +1,16 @@
+= render :layout => "layouts/root" do
+  = render :partial => "shared/head"
+  %body.single
+    .wrapper
+      = render :partial => "shared/header"
+      .content
+        .wrap
+          .col32
+            = yield
+          .col3
+            = render :partial => "shared/search"
+            = render :partial => "shared/tag_cloud"
+            = render :partial => "shared/recent_comments"
+            = render :partial => "shared/meta"
+      = render :partial => "shared/bottom"
+    = render :partial => "shared/footer"

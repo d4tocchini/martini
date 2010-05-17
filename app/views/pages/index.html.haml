@@ -1,0 +1,28 @@
+- header "Listing pages"
+
+%table
+  %thead
+    %tr
+      %th Title
+      %th Body
+      %th Description
+      %th Format
+      %th Published
+      %th Cached slug
+      %th Allow comments
+      %th Allow pings
+      %th{ :colspan => 3 }
+  
+  %tbody
+    - for page in @pages
+      %tr{ :class => cycle(:odd, :even) }
+        %td= page.title
+        %td= page.body
+        %td= page.description
+        %td= page.format
+        %td= page.published
+        %td= page.cached_slug
+        %td= page.allow_comments
+        %td= page.allow_pings
+
+%br

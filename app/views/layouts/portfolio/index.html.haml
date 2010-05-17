@@ -1,0 +1,17 @@
+!!!
+%html{:dir => "ltr", :lang => "en-US", :xmlns => "http://www.w3.org/1999/xhtml"}
+  %head{:profile => "http://gmpg.org/xfn/11"}
+    = render :partial => "shared/head"
+  %body.page.page-template
+    .wrapper
+      = render :partial => "shared/header"
+      .page_title
+        .page_title_inner
+          .wrap
+            %h1 Layout small
+      .content
+        .wrap
+          = render :partial => "portfolio/item", :collection => @posts
+          = render :partial => "shared/pagination"
+      = render :partial => "shared/bottom"
+    = render :partial => "shared/footer"

@@ -1,0 +1,20 @@
+= render :layout => "layouts/root" do
+  = render :partial => "shared/head"
+  %body.error404
+    .wrapper
+      = render :partial => "shared/header"
+      .content
+        .wrap
+          .col32
+            .post
+              %h2.center The page you are trying to reach is can't be found
+              %p Try refining your search, or use the navigation above to locate the post.
+              %a.fresh_button{:href => ""} back to home
+          .col3
+            .widget
+              %form#searchform{:action => "/", :method => "get", :name => "searchform"}
+                %fieldset
+                  %input#s{:name => "s", :type => "text", :value => ""}/
+                  %a.fresh_button{:href => "javascript:document.searchform.submit()"} find
+      = render :partial => "shared/bottom"
+    = render :partial => "shared/footer"

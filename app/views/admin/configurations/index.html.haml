@@ -1,0 +1,15 @@
+- header "Listing configurations"
+
+%table
+  %thead
+    %tr
+      %th Name
+      %th{ :colspan => 3 }
+  
+  %tbody
+    - for configuration in @configurations
+      %tr{ :class => cycle(:odd, :even) }
+        %td= configuration.name
+        %td= link_to 'Edit', edit_admin_configuration_path(configuration)
+
+%br

@@ -1,0 +1,11 @@
+- form_for(:configuration, :url => admin_configuration_path(@configuration)) do |f|
+  = f.error_messages
+  
+  .field
+    = f.label :per_page
+    = f.text_field :prefers_per_page
+  .field
+    = f.label "Feed Per Page"
+    = f.text_field :prefers_feed_per_page
+  .actions
+    = f.submit

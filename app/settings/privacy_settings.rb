@@ -1,0 +1,3 @@
+class PrivacySettings < Configuration
+  
+end

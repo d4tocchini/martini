@@ -1,0 +1,31 @@
+- header "Listing Assets"
+- description "List of all the Assets"
+- keywords "one, two, three"
+- body_id "lance"
+- body_class "awesome"
+  
+%table
+  %thead
+    %tr
+      %th Title
+      %th Preview
+      %th File Name
+      %th Type
+      %th Size
+      %th{ :colspan => 3 }
+  
+  %tbody
+    - for asset in @assets
+      %tr{ :class => cycle(:odd, :even) }
+        %td= asset.title
+        %td
+          = image_tag asset.data.url(:thumb)
+        %td= asset.data_file_name
+        %td= asset.data_content_type
+        %td= asset.data_file_size
+        %td= link_to 'Show', admin_asset_path(asset.id)
+        %td= link_to 'Edit', edit_admin_asset_path(asset.id)
+        %td= link_to 'Destroy', admin_asset_path(asset.id), :confirm => 'Are you sure?', :method => :delete
+
+%br
+= link_to 'New asset', new_admin_asset_path

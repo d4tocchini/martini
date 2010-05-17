@@ -1,0 +1,15 @@
+.logo {position:absolute}
+.header .wrap {height:80px;}
+.col1, .col2, .col3, .col4, .col32 { display:inline; display:inline; float:left; position:relative; margin:0 10px; }
+.col1 { width:938px }
+.col2 { width:456px }
+.col32 { width:618px }
+.col1 .col1 { width:918px }
+.col3 { width:298px }
+.col4 { width:218px }
+.col32 .col3 { width:288px }
+.footer_widgets .col2 {  margin: 0 0 0 0; }
+#searchform a {position:absolute}
+#respond #author, #respond #email, #respond #website, #respond #comment { width:600px; }
+.page_title .small { float:left; width:680px; height:350px; margin:0 7px }
+.page_title .small img { width:664px; height:295px; background:url(../img/bg_pic_small.png) no-repeat 0 0; padding:16px 0px 39px 16px; }

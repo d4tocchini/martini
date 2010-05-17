@@ -1,0 +1,34 @@
+#respond.post
+  %h2 Do you have something to say?
+  .cancel-comment-reply
+    %small
+      %a#cancel-comment-reply-link{:href => "/", :rel => "nofollow", :style => "display:none;"} Click here to cancel reply.
+  %form#commentform{:action => "/contact", :method => "post"}
+    %p
+      %label{:for => "author"}
+        %small
+          Name
+          %span *
+      %input#author{:name => "author", :size => "50", :tabindex => "1", :type => "text", :value => ""}/
+    %p
+      %label{:for => "email"}
+        %small
+          E-mail
+          %span *
+      %input#email{:name => "email", :size => "50", :tabindex => "2", :type => "text", :value => ""}/
+    %p
+      %label{:for => "url"}
+        %small Website
+      %input#website{:name => "url", :size => "50", :tabindex => "3", :type => "text", :value => ""}/
+    %p
+      %label{:for => "comment"}
+        %small Comment
+      %textarea#comment{:cols => "50", :name => "comment", :rows => "10", :tabindex => "4"}
+    %p.info
+      %input#submit.fresh_button{:name => "submit", :tabindex => "5", :type => "submit", :value => "POST Comment"}/
+      Your email is never published nor shared.
+      %br/
+      Required fields are marked
+      %span *
+      %input#comment_post_ID{:name => "comment_post_ID", :type => "hidden", :value => "213"}/
+      %input#comment_parent{:name => "comment_parent", :type => "hidden", :value => "0"}/

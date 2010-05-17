@@ -1,0 +1,34 @@
+- form_for(@page, :url => admin_page_path(@page)) do |f|
+  = f.error_messages
+  
+  .field
+    = f.label :title
+    = f.text_field :title
+  .field
+    = f.label :description
+    = f.text_area :description, :class => :description
+  .field
+    = f.label :body
+    .wmd-panel#wmd-button-bar
+    = f.text_area :body, :id => "wmd-input", :class => "wmd-panel"
+  .field
+    = f.label :tags
+    = f.text_field :tag_list
+  .field
+    = f.label :format
+    = f.text_field :format
+  .field
+    = f.label :published
+    = f.check_box :published
+  .field
+    = f.label :parent
+    = f.select :parent_id, nested_set_options(Page, @page) {|i| "  #{'-' * i.level} #{i.title}" } 
+  .field
+    = f.label :allow_comments
+    = f.check_box :allow_comments
+  .field
+    = f.label :allow_pings
+    = f.check_box :allow_pings
+
+  .actions
+    = f.submit

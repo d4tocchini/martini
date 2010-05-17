@@ -1,0 +1,13 @@
+= render :layout => "layouts/root" do
+  = render :partial => "shared/head"
+  %body.page.page-template
+    .wrapper
+      = render :partial => "shared/header"
+      .content
+        .wrap
+          .col32
+            .page.hentry
+              ~ yield
+          = render :partial => "shared/right"
+      = render :partial => "shared/bottom"
+    = render :partial => "shared/footer"

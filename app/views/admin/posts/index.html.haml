@@ -1,0 +1,32 @@
+- header "Listing posts"
+
+%table
+  %thead
+    %tr
+      %th Title
+      %th Body
+      %th Description
+      %th Format
+      %th Published
+      %th Cached slug
+      %th Allow comments
+      %th Allow pings
+      %th{ :colspan => 3 }
+  
+  %tbody
+    - for post in @posts
+      %tr{ :class => cycle(:odd, :even) }
+        %td= post.title
+        %td= post.body
+        %td= post.description
+        %td= post.format
+        %td= post.published
+        %td= post.cached_slug
+        %td= post.allow_comments
+        %td= post.allow_pings
+        %td= link_to 'Show', admin_post_path(post)
+        %td= link_to 'Edit', edit_post_path(post)
+        %td= link_to 'Destroy', admin_post_path(post), :confirm => 'Are you sure?', :method => :delete
+
+%br
+= link_to 'New post', new_admin_post_path

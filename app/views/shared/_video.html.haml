@@ -1,0 +1,21 @@
+/
+  "Video For Everybody" v0.4 by Kroc Camen of Camen Design <http://camendesign.com/code/video_for_everybody>
+  \===================================================================================================================
+/ first try HTML5 playback. if serving as XML, expand `controls` to `controls="controls"` and autoplay likewise/ warning: playback does not work on iPad/iPhone if you include the poster attribute! we're awaiting a fix from apple
+%video{:controls => "", :height => "360", :poster => "__POSTER__.JPG", :width => "640"}
+  / MP4 must be first for iPad! you must use `</source>` to avoid a closure bug in Firefox 3.0 / Camino 2.0!  
+  %source{:src => "__VIDEO__.MP4", :type => "video/mp4"}
+  / Safari / iPhone video  
+  %source{:src => "__VIDEO__.OGV", :type => "video/ogg"}
+  / Firefox native OGG video  / fallback to Flash  
+  %object{:data => "__FLASH__.SWF?image=__POSTER__.JPG&file=__VIDEO__.MP4", :height => "384", :type => "application/x-shockwave-flash", :width => "640"}
+    / Firefox uses the `data` attribute above, IE/Safari uses the param below    
+    %param{:name => "movie", :value => "__FLASH__.SWF?image=__POSTER__.JPG&file=__VIDEO__.MP4"}/
+    / fallback image. note the title field below, put the title of the video there    
+    %img{:alt => "__TITLE__", :height => "360", :src => "__POSTER__.JPG", :title => "No video playback capabilities, please download the video below", :width => "640"}/
+/ you *must* offer a download link as they may be able to play the file locally. customise this bit all you want
+%p
+  Download Video:
+  %a{:href => "__VIDEO__.MP4"} Apple iTunes "MP4"
+  |
+  %a{:href => "__VIDEO__.OGV"} Open Format "OGG"

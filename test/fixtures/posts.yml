@@ -1,0 +1,21 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  title: MyString
+  body: MyText
+  description: MyText
+  format: MyString
+  published: false
+  cached_slug: MyString
+  allow_comments: false
+  allow_pings: false
+
+two:
+  title: MyString
+  body: MyText
+  description: MyText
+  format: MyString
+  published: false
+  cached_slug: MyString
+  allow_comments: false
+  allow_pings: false

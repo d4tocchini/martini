@@ -1,0 +1,10 @@
+- header @page.title
+- description @page.description || @page.body
+
+- case @page.format
+  - when "textile"
+    :textile
+      #{@page.body}
+  - else
+    :maruku
+      #{@page.body}

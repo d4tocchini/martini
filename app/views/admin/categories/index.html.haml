@@ -1,0 +1,22 @@
+- header "Listing categories"
+
+%table
+  %thead
+    %tr
+      %th Name
+      %th Description
+      %th Parent
+      %th{ :colspan => 3 }
+  
+  %tbody
+    - for category in @categories
+      %tr{ :class => cycle(:odd, :even) }
+        %td= category.name
+        %td= category.description
+        %td= category.parent_id
+        %td= link_to 'Show', category
+        %td= link_to 'Edit', edit_category_path(category)
+        %td= link_to 'Destroy', category, :confirm => 'Are you sure?', :method => :delete
+
+%br
+= link_to 'New category', new_category_path

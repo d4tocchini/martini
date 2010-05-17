@@ -1,0 +1,11 @@
+#popular_related_posts
+  .col3
+    %h3 Popular Posts
+    %ul.thumbnail_list
+      - 3.times do
+        = render :partial => "shared/related_item"
+  .col3
+    %h3 Recent Posts
+    %ul.thumbnail_list
+      - 3.times do
+        = render :partial => "shared/related_item"

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- you can have one global xml file specifying the structure of your site -->
+<!-- it's basically a sitemap for the sitemap -->
+<root type="array">
+	<!-- overview -->
+	<item title="Home" url="/">
+	  
+	</item>
+	
+	<item title="Overview" url="/overview" layout="home">
+	  
+	</item>
+	
+	<item title="Features" url="/features" layout="full">
+    
+	</item>
+	
+	<item title="Layouts" url="/layouts" show_children="true">
+	  
+	</item>
+	
+	<item title="Blog" url="/blog" show_children="false">
+	  
+	</item>
+	
+	<item title="Download" url="/download" show_children="true">
+	  
+	</item>
+	
+	<item title="Support" url="/support" show_children="true">
+	  <item title="Contact" url="/support/contact" layout="contact"/>
+	</item>
+	
+</root>

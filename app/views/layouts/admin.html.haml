@@ -1,0 +1,11 @@
+= render :layout => "layouts/root" do
+  = render "shared/head"
+  %body.page.page-template
+    .wrapper
+      = render "shared/header"
+      .content
+        .wrap
+          .page.hentry
+            = yield
+      = render "shared/bottom"
+    = render "shared/footer"

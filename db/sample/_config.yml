@@ -1,0 +1,53 @@
+# main config
+auto: false
+server: false
+lsi: false
+exclude: shared
+permalink: pretty
+posts_include:
+  - .textile
+  - .markdown
+api: true
+language: en-US
+
+authors:
+  -
+    name: Lance Pollard
+    age: 23
+    city: Berkeley
+    state: CA
+    zip: 94704
+    country: United States
+    company: 4D
+    website: http://github.com/viatropos
+    facebook: http://facebook.com/viatropos
+
+keys:
+  google_analytics: ""
+  google_map: "http://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=6373+ritchurst+place&amp;sll=37.0625,-95.677068&amp;sspn=47.838189,79.541016&amp;ie=UTF8&amp;hq=&amp;hnear=6373+Ritchurst+Pl,+Forestville,+Sonoma,+California+95436&amp;t=p&amp;ll=38.499415,-122.84483&amp;spn=0.020152,0.022316&amp;z=14&amp;iwloc=A&amp;output=embed"
+
+metadata:
+  title: Martini
+  description: "Developer Friendly, Client Ready Blog with Rails 3"
+  tagline: "I'll have a glass of that, please."
+  author: Lance Pollard
+  copyright: "4D Design Lab | All Rights Reserved"
+  country: "United States"
+  classification: Techonology and Innovation
+  keywords: ""
+
+# ICONS
+icons:
+  favicon: "/images/icons/martini-favicon.ico"
+  fluid_icon: "/images/icons/martini-touch-favicon.jpg"
+  touch_icon: "/images/icons/martini-touch-favicon.jpg"
+  touch_startup_image: "/images/icons/touch-startup.png"
+
+# LINKS
+links:
+  twitter: http://www.twitter.com/viatropos
+  github: http://github.com/viatropos
+  stack_overflow: ""
+  digg: ""
+  myspace: ""
+  linked_in: ""
