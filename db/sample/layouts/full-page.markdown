@@ -1,7 +1,6 @@
 ---
-title: Screenshots
+title: Full Page Layout
 tags:
-  - screenshots
   - open source
   - blog framework
 ---

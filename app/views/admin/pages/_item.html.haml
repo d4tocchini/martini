@@ -1,0 +1,8 @@
+%tr{ :class => cycle(:odd, :even), :id => "page-#{page.id}" }
+  %td{:class => "level-#{page.level.to_s}"}= page.title
+  %td= page.published
+  %td= link_to 'Show', nested_path(page)
+  %td= link_to 'Edit', edit_admin_page_path(page.id)
+  %td= link_to 'Destroy', admin_page_path(page.id), :confirm => 'Are you sure?', :method => :delete
+- if page.children
+  = render :partial => "admin/pages/item", :collection => page.children, :as => :page

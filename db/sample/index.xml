@@ -7,19 +7,19 @@
 	  
 	</item>
 	
-	<item title="Overview" url="/overview">
+	<item title="Overview" url="/overview" layout="home">
 	  
 	</item>
 	
-	<item title="Features" url="/features" layout="full">
+	<item title="Features" url="/features" layout="news">
     
 	</item>
 	
-	<item title="Layouts" url="/layouts" show_children="true">
+	<item title="Layouts" url="/layouts" show_children="true" layout="portfolio_large">
 	  
 	</item>
 	
-	<item title="Blog" url="/blog" show_children="false">
+	<item title="Blog" url="/blog" show_children="false" layout="blog">
 	  
 	</item>
 	

@@ -2,11 +2,7 @@ class PagesController < InheritedResources::Base
   layout :determine_layout
   
   def determine_layout
-    if params[:action] == "index"
-      "news"
-    else
-      "right"
-    end
+    Page.template(@page)
   end
   
   protected
@@ -15,6 +11,6 @@ class PagesController < InheritedResources::Base
     end
     
     def basename
-      params[:path].split("/").last.to_s
+      params[:request_path].split("/").last.to_s
     end
 end

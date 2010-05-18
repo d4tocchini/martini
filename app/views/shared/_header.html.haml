@@ -1,7 +1,7 @@
 .header
   .wrap
     = render :partial => "shared/logo"
-    = render :partial => "shared/menu"
+    = render :partial => respond_to?(:menu_partial) ? menu_partial : "shared/menu"
 .page_title
   .page_title_inner
     .wrap

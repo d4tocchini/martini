@@ -28,7 +28,7 @@ Martini::Application.routes.draw do |map|
   
   root :to => "pages#show", :path => "overview"
   
-  match '*path/page/:page' => "pages#index"
-  match '*path' => "pages#show", :as => :page
+  match '*request_path/page/:page' => "pages#index"
+  match '*request_path' => "pages#show", :as => :page
 
 end

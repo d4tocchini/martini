@@ -26,7 +26,19 @@ $(document).ready(function() {
   	});
   	return ui;
   };
-    
+
+/*  
+  $images = "";
+  $('.image_list select option').each(function(index, element) {
+    var option = $(element);
+    $images += "<li>\n";
+    $images += "  <img src='" + option.attr("value");
+  });
+*/
+//  $('.image_list').jcarousel({
+//    
+//  });
+
 //  $("a[rel^='prettyPhoto'], a[rel^='lightbox']").prettyPhoto({
 //		"theme": 'light_square' 																
 //	});
@@ -39,7 +51,7 @@ $(document).ready(function() {
   }).disableSelection();
   
   // sort tables another way
-  $("table").tablesorter(); 
+  $("table.sortable").tablesorter(); 
   
   // login
   

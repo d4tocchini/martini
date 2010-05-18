@@ -48,6 +48,7 @@ So in each of your views you can/should define the following:
 - Rails Cells will be used for widgets, once it's stable enough to use with Rails 3
 - AuthlogicConnect integration
 - Rails 3 Gem architecture
+- Nested Dynamic Routes and Route Helpers
 
 # Extractions
 

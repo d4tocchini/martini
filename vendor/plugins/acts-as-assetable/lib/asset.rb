@@ -16,4 +16,9 @@ class Asset < ActiveRecord::Base
     },
     :path => ":attachment/:id/:style.:extension",
     :bucket => 'ilove4d-test'
+    
+  def url(style = nil)
+    data.url(style || data.default_style)
+  end
+  
 end

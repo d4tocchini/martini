@@ -1,7 +1,6 @@
 ---
-title: Screenshots
+title: Right Sidebar Layout
 tags:
-  - screenshots
   - open source
   - blog framework
 ---

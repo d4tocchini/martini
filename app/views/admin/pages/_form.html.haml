@@ -1,4 +1,4 @@
-- form_for(@page, :url => admin_page_path(@page)) do |f|
+- form_for(@page, :url => admin_page_path(@page.id)) do |f|
   = f.error_messages
   
   .field
@@ -16,13 +16,16 @@
     = f.text_field :tag_list
   .field
     = f.label :format
-    = f.text_field :format
+    = f.select :format, ["textile", "markdown", "plain", "html", "haml"]
   .field
     = f.label :published
     = f.check_box :published
   .field
     = f.label :parent
-    = f.select :parent_id, nested_set_options(Page, @page) {|i| "  #{'-' * i.level} #{i.title}" } 
+    = f.select :parent_id, nested_set_options(Page, @page) {|i| "  #{'-' * i.level} #{i.title}" }, {:include_blank => 'Top Level'}
+  .field.image_list
+    = f.label :featured_image
+    = f.collection_select :featured_image_id, Asset.all, :id, :title
   .field
     = f.label :allow_comments
     = f.check_box :allow_comments

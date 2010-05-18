@@ -1,14 +1,16 @@
+- image = page.featured_image
 .post.hentry.newsitem
   %h2.entry-title
-    %a{:href => "/war-zone-traumas-restaged-at-home/", :rel => "bookmark", :title => "Permalink to Look What I Bought"} Look What I Bought
+    %a{:href => nested_path(page), :rel => :bookmark, :title => "Permalink to #{page.title}"}= page.title
   .entry-meta
-    May 6th, 2010
+    = page.created_at
   .entry-content
     %p
-      %a{:href => "/2010/05/03.jpg", :rel => "lightbox[109]"}
-        %img.alignnone.size-full.wp-image-127{:alt => "", :height => "250", :src => "/2010/05/03.jpg", :title => "03", :width => "600"}/
+      %a{:href => image.url, :rel => "lightbox[#{page.id}]"}
+        %img.alignnone.size-full{:alt => "", :height => "250", :src => image.url(:medium), :title => image.title, :width => "600"}/
     %p
-      %a{:href => "/2010/05/03.jpg", :rel => "lightbox[109]"}
-      Explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro qui.
+      %a{:href => image.url, :rel => "lightbox[#{page.id}]"}
+      :maruku
+        #{truncate(page.body, 200)}
     %p
-      %a.more-link{:href => "/war-zone-traumas-restaged-at-home/#more-109"} More
+      %a.more-link{:href => nested_path(page)} More

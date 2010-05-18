@@ -1,3 +1,13 @@
+---
+title: Download
+tags:
+  - source code
+  - ruby installation
+  - open source
+  - blog framework
+  - rails framework
+---
+
 ## Installation instructions:
 
 <pre><code>

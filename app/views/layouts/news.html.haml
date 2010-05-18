@@ -6,7 +6,7 @@
       .content
         .wrap
           .col32
-            = render :partial => "pages/item", :collection => @pages
+            = render :partial => "pages/item", :collection => @page.children, :as => :page
             = render :partial => "shared/paginator"
           .col3
             = render :partial => "shared/search"

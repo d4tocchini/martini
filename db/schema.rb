@@ -17,6 +17,7 @@ ActiveRecord::Schema.define(:version => 20100516041634) do
     t.string   "label"
     t.datetime "created_at"
     t.boolean  "active"
+    t.string   "context"
     t.string   "assetable_type"
     t.integer  "assetable_id"
   end

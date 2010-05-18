@@ -1,4 +1,5 @@
 ---
+title: Features
 tags:
   - cross browser
   - degradable

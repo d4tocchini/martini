@@ -22,3 +22,19 @@ textarea.description {
   width:100%;
   height:50px;
 }
+
+.level-1 {
+  padding-left:30px;
+}
+table .level-2 {
+  padding-left:60px;
+}
+table .level-3 {
+  padding-left:90px;
+}
+table .level-4 {
+  padding-left:120px;
+}
+th.title {
+  width:100%;
+}
